@@ -1,0 +1,29 @@
+<div class="content">
+    <h1>New Releases</h1>
+    <p>The following is a list of new releases.</p>
+    <p>Click on the <strong>album cover</strong> or <strong>artist name</strong> for more information</p>
+    <br/>
+    <div fxLayout="row wrap" fxLayout.xs="column">
+
+        <!-- Single "Responsive" Card-->
+        <!-- We'll be using this and looping our data into here-->
+        <div fxFlex [style.margin]="'20px'" *ngFor="let i of releases">
+            <mat-card [style.min-width]="'200px'">
+                <mat-card-header>
+                    <mat-card-title>{{i.name}}</mat-card-title>
+                    <mat-card-subtitle>New Release</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image class="album-cover" [src]="i.images[0].url" alt="album art" routerLink ="/album/{{i.id}}">
+                <strong>Release Date: </strong>{{i.release_date}}<br />
+                <strong>Tracks: </strong>{{i.total_tracks}}<br /><br />
+                <mat-card-content >
+                    <mat-chip-list  aria-label="Artist selection" *ngFor="let y of i.artists">
+                        <mat-chip routerLink="/artist/{{y.id}}"> {{y.name}}</mat-chip>
+                    </mat-chip-list>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <!-- -->
+
+    </div>
+</div>
