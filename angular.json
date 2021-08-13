@@ -38,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/web422-a4",
+            "outputPath": "dist/web422-a6",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -95,10 +95,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "web422-a4:build:production"
+              "browserTarget": "web422-a6:build:production"
             },
             "development": {
-              "browserTarget": "web422-a4:build:development"
+              "browserTarget": "web422-a6:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -106,7 +106,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "web422-a4:build"
+            "browserTarget": "web422-a6:build"
           }
         },
         "test": {
@@ -130,5 +130,5 @@
       }
     }
   },
-  "defaultProject": "web422-a4"
+  "defaultProject": "web422-a6"
 }
