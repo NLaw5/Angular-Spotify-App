@@ -1,6 +1,6 @@
 # Angular Spotify Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli). To start, clone the repo and when cloned, type in the CLI: npm install. Once installation is complete, run ng serve and the app should work!
 
 ## Description
 In this Angular Web application we will be interacting with two web services: Spotify's REST APIs and my own created Express App that provides REST APIs for User Authentication and saving of User's favorite songs. The main functionalities involve:
