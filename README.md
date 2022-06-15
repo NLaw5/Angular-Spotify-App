@@ -2,26 +2,22 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) 
 
-## Development server
+## Description
+In this Angular Web application we will be interacting with two web services: Spotify's REST APIs and my own created Express App that provides REST APIs for User Authentication and saving of User's favorite songs. The main functionalities involve:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Logging/registering users 
 
-## Code scaffolding
+Once succesfully logged in, this application will receive a JSON web token, which is required to access user-related APIs as well as navigate throughout the application.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Displaying Spotify's New Releases, Album information, and Artist Discography
 
-## Build
+The main feature in this application is displaying Spotify's new releases to the user. The main page will load in cards from Material UI, in which it will display the top 50 new release albums on Spotify.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Another features include navigation to album information, allowing users to listen to sample tracks, if provided, and allow users to favorite any tracks.
 
-## Running unit tests
+Finally, the last feature involves displaying the Artist Information/Discography, where the Artist's newest albums will be displayed and allow navigation to the specific Album page.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Saved Favorites
 
-## Running end-to-end tests
+Finally, users can save favorite songs on the album information page. Every time the user favorites a song, the song ID is sent as a POST request to my Express Server, in which it will save the song ID to MongoDB for the particular user. When the user clicks on the "favorite" page on our Angular App, we will send a GET request to my Express Server to grab all favorite song Ids, in which our Angular Framework will send as a GET request to the Spotify REST API and display the songs on the page. 
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
